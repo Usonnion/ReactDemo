@@ -31,5 +31,9 @@ module.exports = {//注意这里是exports不是export
     historyApiFallback: true,//在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
     inline: true,//设置为true，当源文件改变时会自动刷新页面
     port: 8999,//设置默认监听端口，如果省略，默认为"8080"
+  },
+
+  resolve: {
+    extensions: ['.js', '.jsx'], //后缀名自动补全
   }
 };
