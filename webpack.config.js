@@ -22,7 +22,10 @@ module.exports = {//注意这里是exports不是export
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin()//热模块替换插件
+    new webpack.HotModuleReplacementPlugin(),//热模块替换插件
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': 'development'
+    })
   ],
 
   //webpack-dev-server配置
